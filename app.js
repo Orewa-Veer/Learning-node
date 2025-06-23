@@ -1,9 +1,7 @@
-const EventEmitter = require('events');
-const Logging= require('./logger');
-
-    const logger=new Logging;
-    logger.on('message Logged', (arg)=>{console.log('Logging',arg);
-    })
-
-//Register a listner
-logger.log('message')
+const { error } = require('console');
+const fs= require('fs');
+fs.readdir('./',(error,file)=>{
+    if(error) console.log(error);
+    else console.log(file);
+    
+})
